@@ -1,0 +1,39 @@
+***********************************
+*@author:Xinghao Gu               *
+*@data: 2015-10-03                *
+***********************************
+
+Folder Structure:
+	Homework
+	-src
+		- com.xinghao.CUT
+			testcase.java
+		- com.xinhao.TestHarnEss
+			Main.java
+			TestHarnEss.java
+			MyAnnotation.java
+----------------------------------------------------------------------------
+How to run from command line
+
+java -jar TestHarness.jar <yourtestclassname> <t or f>
+1. run default testcase
+java -jar TestHarness.jar
+2. run your test class
+java -jar TestHarness.jar yourtestclassname
+3. Allow private Access. Default is set to false
+java -jar TestHarness.jar testcase t
+
+----------------------------------------------------------------------------
+How to run from Main.java
+
+1. put your test class into com.xinghao.CUT package
+2. Pass your test class name to creat a TestHarnEss object
+ 	TestHarness test = new TestHarnEss("classname")
+3. call allowPrivateAccess(true) to turn on private access, default is false
+	test.allowPrivateAccess(true)
+4. call invoke() to test all the methods
+	test.invoke()
+5. call nestinvoke() to test random nested methods
+	test.nestinvoke()
+	
+	
